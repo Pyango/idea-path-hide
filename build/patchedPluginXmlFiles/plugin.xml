@@ -1,0 +1,21 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <version>1.1.2</version>
+  <change-notes>&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;Update &lt;code&gt;platformVersion&lt;/code&gt; to &lt;code&gt;2021.1.3&lt;/code&gt; for compatibility with Apple M1&#xD;&lt;/li&gt;&lt;li&gt;Change since/until build to &lt;code&gt;211-213.*&lt;/code&gt; (2021.1 - 2021.3)&#xD;&lt;/li&gt;&lt;li&gt;Upgrade Gradle Wrapper to &lt;code&gt;7.4&lt;/code&gt;&#xD;&lt;/li&gt;&lt;li&gt;Dependencies - upgrade &lt;code&gt;org.jetbrains.intellij&lt;/code&gt; to &lt;code&gt;1.4.0&lt;/code&gt;&#xD;&lt;/li&gt;&lt;li&gt;Dependencies (GitHub Actions) - upgrade &lt;code&gt;JetBrains/qodana-action&lt;/code&gt; to &lt;code&gt;4.2.5&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;</change-notes>
+  <description>&lt;p&gt;&lt;strong&gt;IntelliJ Platform Plugin Template&lt;/strong&gt; is a repository that provides a pure template to make it easier to create a new plugin project (check the &lt;a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template"&gt;Creating a repository from a template&lt;/a&gt; article).&lt;/p&gt;
+
+&lt;p&gt;The main goal of this template is to speed up the setup phase of plugin development for both new and experienced developers by preconfiguring the project scaffold and CI, linking to the proper documentation pages, and keeping everything organized.&lt;/p&gt;</description>
+  <idea-version since-build="211" until-build="213.*" />
+  <id>org.jetbrains.plugins.template</id>
+  <name>Template</name>
+  <vendor>JetBrains</vendor>
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationService serviceImplementation="org.jetbrains.plugins.template.services.MyApplicationService" />
+    <projectService serviceImplementation="org.jetbrains.plugins.template.services.MyProjectService" />
+  </extensions>
+  <applicationListeners>
+    <listener class="org.jetbrains.plugins.template.listeners.MyProjectManagerListener" topic="com.intellij.openapi.project.ProjectManagerListener" />
+  </applicationListeners>
+</idea-plugin>
